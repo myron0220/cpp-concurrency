@@ -34,7 +34,4 @@ int main() {
   // this will calls std::terminate() as 
   // the thread with `some_other_function` are already in t1 and cannot be stopped
   t1 = std::move(t3); 
-
-  return 0;
 }
-

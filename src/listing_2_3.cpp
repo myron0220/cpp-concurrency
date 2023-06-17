@@ -13,7 +13,7 @@ class thread_guard {
   public:
     // disable implicit conversion e.g. thread_guard (200)
     explicit thread_guard(std::thread& t_)
-      :t(t_) {}
+      : t(t_) {}
 
     ~thread_guard() {
       if (t.joinable()) {
@@ -32,7 +32,7 @@ struct func {
   int& i;
 
   func(int& i_)
-    :i(i_) {}
+    : i(i_) {}
 
   // functor operator
   void operator()() {
@@ -62,5 +62,4 @@ void f() {
 
 int main() {
   f();
-  return 0;
 }
